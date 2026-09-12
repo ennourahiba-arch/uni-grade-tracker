@@ -1,4 +1,4 @@
-/** Number of whole days between today and `dateStr` (positive = in the future). */
+
 export function daysUntil(dateStr: string): number {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
