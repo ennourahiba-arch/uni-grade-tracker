@@ -1,10 +1,6 @@
 import { useEffect, useState } from 'react';
 
-/**
- * Generic React hook that keeps a piece of state in sync with localStorage.
- * This is the only persistence layer the app uses - everything is local to
- * this device/browser, no backend required.
- */
+
 export function useLocalStorage<T>(key: string, initialValue: T) {
   const [value, setValue] = useState<T>(() => {
     try {
