@@ -1,10 +1,5 @@
 import type { ReactNode } from 'react';
 
-// A very small, safe subset-of-Markdown renderer (bold, italic, inline code,
-// bullet lists). Deliberately built with React elements instead of
-// dangerouslySetInnerHTML so there's no HTML-injection/XSS risk at all, even
-// though notes are only ever authored by you and stored locally.
-
 function parseInline(text: string, keyPrefix: string): ReactNode[] {
   const tokens: ReactNode[] = [];
   const regex = /(\*\*([^*]+)\*\*|\*([^*]+)\*|`([^`]+)`)/g;
